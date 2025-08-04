@@ -1,10 +1,12 @@
 export const profile = {
-	fullName: 'Your Name',
-	title: '',
-	institute: '',
-	author_name: '', // Author name to be highlighted in the papers section
+	fullName: 'Cognition and Decision Lab',
+	title: 'Economics, Neuroscience, and Psychology',
+	institute: 'Columbia University',
+	author_name: 'Woodford, Dean, Afrouzi',
 	research_areas: [
-		// { title: 'Physics', description: 'Brief description of the research interest', field: 'physics' },
+		{ title: 'Economic Decision Making', description: 'Understanding cognitive processes in economic choices', field: 'economics' },
+		{ title: 'Limited Attention', description: 'Studying allocation of attention during choice', field: 'psychology' },
+		{ title: 'Incomplete Preferences', description: 'Role of incomplete preferences in decision making', field: 'economics' },
 	],
 }
 

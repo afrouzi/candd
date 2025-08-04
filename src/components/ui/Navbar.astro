@@ -15,38 +15,36 @@ const {fullName, title} = profile
 >
 	<div class='flex flex-col my-8 justify-between h-full'>
 		<div>
-			<div class='flex justify-center items-center flex-col'>
-				<Image
-					class='mask mask-circle size-44'
-					src={ProfilePictures}
-					alt={`Profile picture of ${fullName}`}
-				/>
-				<h1 class="text-lg font-black mt-8 hidden lg:block">{title} <span>{fullName}</span></h1>
-			</div>
-			<div class='mx-4 mt-16'>
+			<div class='mx-4 mt-8'>
 				<ul class='space-y-4 menu grow shrink menu-md overflow-y-auto'>
 					<li>
-                        <a href={`${template.base}/`} class='text-lg'>Home</a>
+						<a href={`${template.base}/`} class='text-lg'>Home</a>
 					</li>
 					<li>
-                        <a href={`${template.base}/research`} class='text-lg'>Research</a>
+						<a href={`${template.base}/people`} class='text-lg'>People</a>
 					</li>
 					<li>
-                        <a href={`${template.base}/papers`} class='text-lg'>Papers</a>
+						<a href={`${template.base}/projects`} class='text-lg'>Projects</a>
 					</li>
-					<li>
-                        <a href={`${template.base}/cv`} class='text-lg'>CV</a>
-                    </li>
-                    {isBlogPopulated &&
-					<li>
-                        <a href={`${template.base}/blog/1`} class='text-lg'>Blog</a>
+					<li class="menu-dropdown">
+  <details>
+    <summary>
+      <a href={`${template.base}/papers`} class='text-lg'>Papers</a>
+    </summary>
+    <ul class="ml-4">
+      <li><a href={`${template.base}/papers#economic-decision-making`} class="text-base">Economic Decision Making with Limited Attention</a></li>
+      <li><a href={`${template.base}/papers#bounded-rationality`} class="text-base">Bounded Rationality in Macroeconomics</a></li>
+      <li><a href={`${template.base}/papers#behavioral-economic-links`} class="text-base">Links Between Behavioral and Economic Phenomena</a></li>
+      <li><a href={`${template.base}/papers#neuroeconomics`} class="text-base">Neuroeconomics</a></li>
+      <li><a href={`${template.base}/papers#other`} class="text-base">Other</a></li>
+    </ul>
+  </details>
 </li>
-                    }
+					<li>
+						<a href={`${template.base}/links`} class='text-lg'>Links</a>
+					</li>
 				</ul>
 			</div>
-		</div>
-		<div class='mx-4'>
-			<SocialIcons/>
 		</div>
 	</div>
 </aside>

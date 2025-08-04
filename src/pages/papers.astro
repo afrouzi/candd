@@ -1,53 +1,157 @@
 ---
-import Layout from "@/layouts/Layout.astro";
-import { publications } from "@/data/cv";
-import { highlightAuthor } from "@/lib/utils";
-import {template} from "@/settings";
-
-const ALL_PAPERS = publications; // This will be replaced with dynamic data later
+import Layout from '../layouts/Layout.astro'
 ---
-
-<Layout title="Papers">
-  <div class="prose max-w-none">
-    <h1 class="text-3xl font-bold mb-8">Publications</h1>
-
+<Layout>
+  <section class="py-12" id="economic-decision-making">
+    <h1 class="text-4xl font-bold mb-8">Economic Decision Making with Limited Attention</h1>
     <div class="space-y-8">
-      {
-        ALL_PAPERS.map((paper) => (
-          <div class="card bg-base-200">
-            <div class="card-body">
-              <h2 class="card-title text-xl">
-                <a href={template.base + paper.link} class="hover:text-accent">
-                  {paper.title}
-                </a>
-              </h2>
-              <p class="text-base mb-2">
-                <span class="font-medium">Authors:</span>{" "}
-                <span set:html={highlightAuthor(paper.authors)} />
-              </p>
-              <p class="text-sm mb-3">
-                <span class="italic">{paper.journal}</span> • {paper.time}
-              </p>
-              <p class="text-sm text-base-content/80">{paper.abstract}</p>
-              <div class="card-actions justify-end mt-4">
-                <a href={paper.link} class="btn btn-sm btn-secondary text-secondary-content">
-                  Read Paper
-                </a>
-              </div>
-            </div>
-          </div>
-        ))
-      }
+      <h2 class="text-2xl font-bold mb-4">Published Papers</h2>
+      <ul class="list-disc ml-8 space-y-2">
+        <li><span class="text-blue-600">"Optimally Imprecise Memory and Biased Forecasts,"</span> Azeredo da Silveira, Rava, Yeji Sung, and Michael Woodford, American Economic Review, 114 (10): 3075–3118, October 2024.</li>
+        <li><span class="text-blue-600">"Imprecise probabilistic inference from sequential data,"</span> Arthur Prat-Carrabin and Michael Woodford, Psychological Review, 2024.</li>
+        <li><span class="text-blue-600">"Experimental Tests of Rational Inattention,"</span> Mark Dean and Nathaniel Neligh, Journal of Political Economy, forthcoming.</li>
+        <li><span class="text-blue-600">"Rational Inattention when Decisions Take Time,"</span> Benjamin Hébert and Michael Woodford, Journal of Economic Theory, January 2023. </li>
+        <li><span class="text-blue-600">"The effects of base rate neglect on sequential belief updating and real-world beliefs,"</span> Brandon K. Ashinoff, Justin Buck, Michael Woodford, and Guillermo Horga, PLOS Computational Biology, December 2022.</li>
+        <li><span class="text-blue-600">"Rationally Inattentive Behavior: Characterizing and Generalizing Shannon Entropy,"</span> Andrew Caplin, Mark Dean, and John Leahy, Journal of Political Economy, June 2022, Vol. 130, No. 6.</li>
+        <li><span class="text-blue-600">"Cognitive Imprecision and Small-Stakes Risk Aversion,"</span> Mel Win Khaw, Ziang Li, and Michael Woodford, Review of Economic Studies, July 2021, Vol. 88, Issue 4, pp. 1979-2013. </li>
+        <li><span class="text-blue-600">"Outlier Blindness: A Neurobiological Foundation for Neglect of Financial Risk,"</span> Elise Payzan-LeNestour and Michael Woodford, Journal of Financial Economics, forthcoming.</li>
+        <li><span class="text-blue-600">"Neighborhood-Based Information Costs,"</span> Ben Hébert and Michael Woodford, American Economics Review, October 2021, Vol. 111, No. 10, pp. 3225-55.</li>
+        <li><span class="text-blue-600">"Individual Differences in the Perception of Probability,"</span> Mel Win Khaw, Luminita Stevens, and Michael Woodford, PLoS Computational Biology, April 2021, 17(4): e1008871.</li>
+        <li><span class="text-blue-600">"Estimating Information Cost Functions in Models of Rational Inattention,"</span> Ambuj Dewan and Nathaniel Neligh, Journal of Economic Theory, May 2020, Vol. 187, Article No. 105011.</li>
+        <li><span class="text-blue-600">"Modeling Imprecision in Perception, Valuation and Choice,"</span> Michael Woodford, Annual Review of Economics May 2020, 12: 579-601.</li>
+        <li><span class="text-blue-600">"Endogenous Quantal Response Equilibrium,"</span> Evan Friedman, Games and Economic Behavior, November 2020, Volume 124, Pages 620-643.</li>
+        <li><span class="text-blue-600">"Diverse Motives for Human Curiosity,"</span> Kenji Kobayashi, Silvio Ravaioli, Adrien Baranes, Michael Woodford, and Jacqueline Gottlieb, Nature Human Behaviour, April 2019, 3: 587–595</li>
+        <li><span class="text-blue-600">"Rational Inattention, Optimal Consideration Sets and Stochastic Choice,"</span> Andrew Caplin, Mark Dean and John Leahy, Review of Economic Studies, Vol 86(3), May 2019, pp. 1061-1094.</li>
+        <li><span class="text-blue-600">"Temporal Discounting and Search Habits: Evidence for a Task-Dependent Relationship,"</span> Mel Win Khaw, Ziang Li, and Michael Woodford, Frontiers in Psychology: Decision Neuroscience, vol. 9, November 2018, art. 2102.</li>
+        <li><span class="text-blue-600">"Discrete Adjustment to a Changing Environment: Experimental Evidence,"</span> Mel Win Khaw, Luminita Stevens, Michael Woodford, Journal of Monetary Economics, Vol. 15, December 2017, pp. 469-473.</li>
+        <li><span class="text-blue-600">"Limited Attention and Status Quo Bias,"</span> Mark Dean, Özgür Kıbrıs and Yusufcan Masatlioglu, Journal of Economic Theory, Vol 169, May 2017, pp. 93-127.</li>
+        <li><span class="text-blue-600">"Saticficing and Stochastic Choice,"</span> Victor Aguilar, Maria Jose Boccardi and Mark Dean, Journal of Economic Theory, Vol. 166, November 2016, pp. 445-482.</li>
+        <li><span class="text-blue-600">"Revealed Preference, Rational Inattention and Costly Information Acquisition,"</span> Andrew Caplin and Mark Dean, American Economic Review, July 2015, 105 (7): 2183-2203.</li>
+        <li><span class="text-blue-600">"Stochastic Choice: An Optimizing Neuroeconomic Model,"</span> Michael Woodford, The American Economic Review, January 2014, 104.5: 495-500.</li>
+        <li><span class="text-blue-600">"The Price of Flexibility: Towards a Theory of Thinking Aversion,"</span> Pietro Ortoleva,  Journal of Economic Theory, May 2013, Vol. 148, No. 3, 903–934.</li>
+        <li><span class="text-blue-600">"Prospect Theory as Efficient Perceptual Distortion,"</span> Michael Woodford, The American Economic Review, May 2012, 102.3: 41-46.</li>
+        <li><span class="text-blue-600">“Search and Satisficing,”</span> Andrew Caplin, Mark Dean and Daniel Martin), The American Economic Review, December 2011, 101 (7): 2899-2922.</li>
+        <li><span class="text-blue-600">“Search, Choice and Revealed Preference,"</span>  Andrew Caplin and Mark Dean, Theoretical Economics, January 2011, 6: 19-48.</li>
+        <li><span class="text-blue-600">"Information-Constrained State-Dependent Pricing,"</span> Michael Woodford, Journal of Monetary Economics, June 2009, 56: S100-S124.</li>
+      </ul>
+      <h2 class="text-2xl font-bold mt-8 mb-4">Working Papers</h2>
+      <ul class="list-disc ml-8 space-y-2">
+        <li><span class="text-blue-600">"Rational Choice Overload,"</span> Lucas de Lara and Mark Dean, May 2024.</li>
+        <li><span class="text-blue-600">"Cognitive Imprecision and Stake-Dependent Risk Attitudes,"</span> Mel Win Khaw, Ziang Li, and Michael Woodford, September 2024.</li>
+        <li><span class="text-blue-600">"Sequential Sampling and Equilibrium​,"</span> Duarte Gonçalves, November 2022.</li>
+        <li><span class="text-blue-600">"The Status Quo and Belief Polarization of Inattentive Agents: Theory and Experiment,"</span> Vladimir Novak, Andrei Matveenko, and Silvio Ravaioli, March 2021.</li>
+        <li><span class="text-blue-600">"The Effect of Incentives on Choices and Beliefs in Games. An Experiment,"</span> Teresa Esteban-Casanelles and Duarte Gonçalves, November 2020.</li>
+        <li><span class="text-blue-600">"Optimally Imprecise Memory and Biased Forecasts,"</span> Rava Azeredo da Silveira, Yeji Sung, and Michael Woodford, NBER Working Paper no. 28075, November 2020.</li>
+        <li><span class="text-blue-600">"Rational Inattention when Decisions Take Time,"</span> Benjamin Hébert and Michael Woodford,  NBER Working Paper no. 26415, October 2019. </li>
+        <li><span class="text-blue-600">"Information Costs and Sequential Information Sampling,"</span> Benjamin Hébert and Michael Woodford,  November 2018.  </li>
+        <li><span class="text-blue-600">"Rational Inattention in Continuous Time,"</span> Benjamin Hébert and Michael Woodford,  November 2018.  </li>
+        <li><span class="text-blue-600">"Optimal Evidence Accumulation and Stochastic Choice,"</span> Michael Woodford, August 2016.</li>
+        <li><span class="text-blue-600">“The Behavioral Implications of Rational Inattention with Shannon Entropy,"</span> Andrew Caplin and Mark Dean, August 2013.</li>
+        <li><span class="text-blue-600">"Inattentive Valuation and Reference Dependent Choice,"</span> Michael Woodford, May 2012.</li>
+        <li><span class="text-blue-600">"Inattention as a Source of Random Discrete Adjustments,"</span> Michael Woodford, April 2008.​</li>
+      </ul>
     </div>
-
-    <div class="flex justify-center mt-8">
-      <div class="join">
-        <button class="join-item btn btn-sm">«</button>
-        <button class="join-item btn btn-sm">1</button>
-        <button class="join-item btn btn-sm btn-active">2</button>
-        <button class="join-item btn btn-sm">3</button>
-        <button class="join-item btn btn-sm">»</button>
-      </div>
+  </section>
+  <section class="py-12" id="bounded-rationality">
+    <h1 class="text-4xl font-bold mb-8">Bounded Rationality in Macroeconomics</h1>
+    <div class="space-y-8">
+      <h2 class="text-2xl font-bold mb-4">Published Papers</h2>
+      <ul class="list-disc ml-8 space-y-2">
+        <li><span class="text-blue-600">"Fiscal and Monetary Stabilization Policy at the Zero Lower Bound: Consequences of Limited Foresight,"</span> Michael Woodford and Yinxi Xie, Journal of Monetary Economics, January 2022, Vol. 125, pp. 18-35.</li>
+        <li><span class="text-blue-600">"Noisy Memory and Over-Reaction to News,"</span> Rava Azaredo da Silveira and Michael Woodford, AEA Papers and Proceedings, May 2019, 109: 557-561.</li>
+        <li><span class="text-blue-600">"Policy Options at the Zero Lower Bound when Foresight is Limited,"</span> Michael Woodford and Yinxi Xie, AEA Papers and Proceedings, May 2019, 109: 433-437.</li>
+        <li><span class="text-blue-600">"Are Low Interest Rates Deflationary? A Paradox of Perfect-Foresight Analysis,"</span> Mariana García-Schmidt and Michael Woodford, American Economic Review, January 2019, 109: 86-120.</li>
+        <li><span class="text-blue-600">"Monetary Policy Analysis when Planning Horizons are Finite,"</span> Michael Woodford, NBER Macroeconomics Annual, April 2018, 33: 1-50. </li>
+        <li><span class="text-blue-600">"Macroeconomic Analysis without the Rational Expectations Hypothesis,"</span> Michael Woodford, Annual Review of Economics, August 2013, 5.1: 303-346.</li>
+        <li><span class="text-blue-600">"Robustly Optimal Monetary Policy in a Microfounded New Keynesian Model,"</span> Klaus Adam and Michael Woodford, Journal of Monetary Economics 59: 468-487 (2012).</li>
+        <li><span class="text-blue-600">"Robustly Optimal Monetary Policy with Near-Rational Expectations,"</span> Michael Woodford, American Economic Review, March 2010, 100(1):274-303.</li>
+      </ul>
+      <h2 class="text-2xl font-bold mt-8 mb-4">Working Papers</h2>
+      <ul class="list-disc ml-8 space-y-2">
+        <li><span class="text-blue-600">"Macroeconomic Expectations and Cognitive Noise,"</span> Yeji Sung, December 2022.</li>
+        <li><span class="text-blue-600">"What Can Measured Beliefs Tell Us About Monetary Non-Neutrality?,"</span> Hassan Afrouzi, Joel P. Flynn, and Choongryul Yang, June 2024.</li>
+        <li><span class="text-blue-600">"Dynamic Rational Inattention and the Phillips Curve,"</span> Hassan Afrouzi and Choongryul Yang, December 2020.</li>
+        <li><span class="text-blue-600">"Strategic Inattention, Inflation Dynamics and the Non-Neutrality of Money,"</span> Hassan Afrouzi, March 2020.</li>
+        <li><span class="text-blue-600">"Robustly Optimal Monetary Policy in a New Keynesian Model with Housing,"</span> Klaus Adam and Michael Woodford, CEPR Discussion Paper no. 14445, February 2020.</li>
+        <li><span class="text-blue-600">"Deeper Habits,"</span> Mel Win Khaw and Oskar Zorrilla, November 2018.</li>
+      </ul>
     </div>
-  </div>
+  </section>
+  <section class="py-12" id="behavioral-economic-links">
+    <h1 class="text-4xl font-bold mb-8">Links Between Behavioral and Economic Phenomena</h1>
+    <div class="space-y-8">
+      <h2 class="text-2xl font-bold mb-4">Published Papers</h2>
+      <ul class="list-disc ml-8 space-y-2">
+        <li><span class="text-blue-600">"Econographics",</span> Jonathan Chapman, Mark Dean, Pietro Ortoleva, Erik Snowberg, and Colin Camerer, Journal of Political Economy Microeconomics, January 2023. </li>
+        <li><span class="text-blue-600">“The Empirical Relationship Between Nonstandard Economic Behaviors,"</span>  Mark Dean and Pietro Ortoleva, Proceedings of the National Academy of Sciences of the United States of America, June 2019.</li>
+        <li><span class="text-blue-600">“Allais, Ellsberg and Hedging”</span> Mark Dean and  Pietro Ortoleva, Theoretical Economics, January 2017, 12:377-424.</li>
+      </ul>
+      <h2 class="text-2xl font-bold mt-8 mb-4">Working Papers</h2>
+      <ul class="list-disc ml-8 space-y-2">
+        <li><span class="text-blue-600">"On the Relationship Between Willingness to Accept and Willingness to Pay",</span> Jonathan Chapman, Mark Dean, Pietro Ortoleva, Erik Snowberg, and Colin Camerer, May 2021. </li>
+      </ul>
+    </div>
+  </section>
+  <section class="py-12" id="neuroeconomics">
+    <h1 class="text-4xl font-bold mb-8">Neuroeconomics</h1>
+    <div class="space-y-8">
+      <h2 class="text-2xl font-bold mb-4">Published Papers</h2>
+      <ul class="list-disc ml-8 space-y-2">
+        <li><span class="text-blue-600">"Representational Geometry Explains Puzzling Error Distributions in Behavioral Tasks,"</span> Xuexin Wei and Michael Woodford, Proc. Natl. Acad. Sci. U.S.A. 122 (4) e2407540122, January 2025.</li>
+        <li><span class="text-blue-600">"Jointly Efficient Encoding and Decoding in Neural Populations,"</span> Simone Blanco Malerba, Aurora Micheli, Michael Woodford, and Rava Azeredo da Silveira, PLoS Comput Biol 20(7): e1012240, July 2024.</li>
+        <li><span class="text-blue-600">"Neurophysiological markers of emotion regulation predict efficacy of entrepreneurship education,"</span> Pablo Egana-delSol, Xiaoxiao Sun and Paul Sajda, Scientific Reports, May 3, 2023.</li>
+        <li><span class="text-blue-600">"Efficient Coding of Numbers Explains Decision Bias and Noise,"</span> Arthur Prat-Carrabin and Michael Woodford, Nature Human Behaviour, May 30, 2022. </li>
+        <li><span class="text-blue-600">"Bias and Variance of the Bayesian-Mean Decoder,"</span> Arthur Prat-Carrabin and Michael Woodford, Advances in Neural Information Processing Systems 34 (NeurIPS 2021).</li>
+        <li><span class="text-blue-600">"Is EEG Suitable for Marketing Research? A Systematic Review,"</span> Andrea Bazzani, Silvio Ravaioli, Leopoldo Trieste, Ugo Faraguna, and Giuseppe Turchetti, Frontiers in Neuroscience, December 2020.</li>
+        <li><span class="text-blue-600">"Efficient Sampling and Noisy Decisions,"</span> Joseph A. Heng, Michael Woodford, and Rafael Polania, eLife, September 2020, 9: e54962. </li>
+        <li><span class="text-blue-600">"Multiple Conceptions of Resource Rationality,"</span> WeiJi Ma and Michael Woodford, Behavioral and Brain Science 43: e15, posted online March 11, 2020.</li>
+        <li><span class="text-blue-600">"Efficient Coding of Subjective Value,"</span> Rafael Polanía, Michael Woodford and Christian C. Ruff, Nature Neuroscience,  January 2019, 22: 134-142.</li>
+        <li><span class="text-blue-600">"How can Neuroscience inform Economics?,"</span> Mark Dean and Ian Krajbich, Current Opinion in Behavioral Sciences, October 2015, 4: 51-57.</li>
+        <li><span class="text-blue-600">"What Can Neuroeconomics Tell us About Economic Decision Making?,"</span> Mark Dean Chapter in Comparative Decision Making, Philip Crowley and Thomas Zentall, eds, May 2012.</li>
+        <li><span class="text-blue-600">"Testing the Reward Prediction Error Hypothesis with an Axiomatic Model,"</span> Robb Rutledge, Mark Dean, Andrew Caplin and Paul Glimcher, Journal of Neuroscience, October 2010, 30(40): 13525-13535.</li>
+        <li><span class="text-blue-600">"Measuring Beliefs and Rewards: A Neuroeconomic Approach,"</span> Andrew Caplin, Mark Dean, Paul Glimcher and Robb Rutledge, Quarterly Journal of Economics, August 2010, 125(3): 923-960.</li>
+        <li><span class="text-blue-600">"Axiomatic Methods, Dopamine and Reward Prediction Error,"</span> Andrew Caplin and Mark Dena, Current Opinion in Neurobiology, August 2008, 18(2): 197-202.</li>
+        <li><span class="text-blue-600">"Dopamine, Reward Prediction Error, and Economics,"</span> Andrew Caplin and Mark Dean, Quarterly Journal of Economics, May 2008 123(2): 663-701​.</li>
+      </ul>
+      <h2 class="text-2xl font-bold mt-8 mb-4">Working Papers</h2>
+      <ul class="list-disc ml-8 space-y-2">
+        <li><span class="text-blue-600">"Adaptive Efficient Coding: A Variational Autoencoder Approach,"</span> Guy Aridor, Francesco Grechi, and Michael Woodford, posted on bioRxiv on May 31, 2020. </li>
+      </ul>
+    </div>
+  </section>
+  <section class="py-12" id="other">
+    <h1 class="text-4xl font-bold mb-8">Other</h1>
+    <div class="space-y-8">
+      <h2 class="text-2xl font-bold mb-4">Published Papers</h2>
+      <ul class="list-disc ml-8 space-y-2">
+        <li><span class="text-blue-600">"The Language of (Non)replicable Social Science,"</span> Michal Herzenstein, Sanjana Rosario, Shin Oblander, and Oded Netzer, Psychological Science, forthcoming.</li>
+        <li><span class="text-blue-600">"Beyond Unbounded Beliefs: How Preferences and Information Interplay in Social Learning,"</span> Navin Kartik, SangMok Lee, Tianhao Liu, and Daniel Rappoport, Econometrica, forthcoming.</li>
+        <li><span class="text-blue-600">"Is It the Message or the Messenger? Examining Movement in Immigration Beliefs,"</span> Hassan Afrouzi, Carolina Arteaga, and Emily Weisburst, Journal of Political Economy Microeconomics, Volume 2, Issue 2, May 2024, Pages 201-397.</li>
+        <li><span class="text-blue-600">"Endogenous Precision of the Number Sense,"</span> Arthur Prat-Carrabin and Michael Woodford, eLife 13:RP101277, September 2024.</li>
+        <li><span class="text-blue-600">"Frontiers: Estimating the Long-Term Impact of Major Events on Consumption Patterns: Evidence from COVID-19,"</span> Shin Oblander and Daniel Minh McCarthy, Marketing Science, September 2023, Volume 42, Issue 5, pages 839-852.</li>
+        <li><span class="text-blue-600">"Overreaction in Expectations: Evidence and Theory,"</span> Hassan Afrouzi, Spencer Y Kwon, Augustin Landier, Yueran Ma, and David Thesmar, The Quarterly Journal of Economics, Volume 138, Issue 3, August 2023, Pages 1713-1764.</li>
+        <li><span class="text-blue-600">"Strategy inference during learning via cognitive activity-based credit assignment models,"</span> Ashwin James, Patricia Reynaud-Bouret, Giulia Mezzadri, Francesca Sargolini, Ingrid Bethus and Alexandre Muzy, Scientific Reports, June 2023.</li>
+        <li><span class="text-blue-600">"Stochastic Equilibria: Noise in Actions or Beliefs?,"</span> Evan Friedman, American Economic Journal: Microeconomics, February 2022, Vol. 14, No. 1, pp. 94-142. </li>
+        <li><span class="text-blue-600">"Deconstructing the Filter Bubble: User Decision-Making and Recommender Systems,"</span> Guy Aridor, Duarte Goncalves, Shan Sikdar, Proceedings of the ACM Conference on Recommender Systems, September 2020,  82-91.</li>
+        <li><span class="text-blue-600">"Stochastic Choice and Preferences for Randomization,"</span> Marina Agranov and Pietro Ortoleva, Journal of Political Economy, February 2017, 125.1: 40-68.</li>
+        <li><span class="text-blue-600">"Cautious Expected Utility and the Certainty Effect,"</span> Simone Cerreia-Vioglio, David Dillenberger and Pietro Ortoleva, Econometrica, March 2015, Vol. 83, No. 2, 693-728.</li>
+        <li><span class="text-blue-600">"Incomplete Preferences under Uncertainty: Indecisiveness in Beliefs vs. Tastes,"</span> Efe Ok, Pietro Ortoleva and Gil Riella) Econometrica, July 2012,  Vol. 80, No. 4 , 1791 –1808.</li>
+        <li><span class="text-blue-600">"Status Quo Bias, Multiple Priors and Uncertainty Aversion,"</span> Pietro Ortoleva, Games and Economic Behavior, July 2010, Vol. 69 pp. 411 – 424. </li>
+      </ul>
+      <h2 class="text-2xl font-bold mt-8 mb-4">Working Papers</h2>
+      <ul class="list-disc ml-8 space-y-2">
+        <li><span class="text-blue-600">"Imprecise Counting of Observations in Averaging Tasks Predicts Primacy and Recency Effects,"</span> Arthur Prat-Carrabin and Michael Woodford, October 2024.</li>
+        <li><span class="text-blue-600">"Probabilistic Machine Learning: New Frontiers for Modeling Consumers and their Choices,"</span> Ryan Dew, Nicolas Padilla, Lan E. Luo, Shin Oblander, Asim Ansari, Khaled Boughanmi, Michael Braun, Fred M. Feinberg, Jia Liu, Thomas Otter, Longxiu Tian, Yixin Wang, and Mingzhang Yin, April 2024.</li>
+        <li><span class="text-blue-600">"‘Did You Catch the Game Last Night?’ Peer Group Effects in Sell-Side Analyst Forecasts,"</span> Lukas F. Fischer and Edward P. Shore, April 2023.</li>
+        <li><span class="text-blue-600">"Beyond Unbounded Beliefs: How Preferences and Information Interplay in Social Learning,"</span> Navin Kartik, SangMok Lee, Tianhao Liu, and Daniel Rappoport, December 2022.</li>
+        <li><span class="text-blue-600">"A Better Test of Choice Overload,"</span> Mark Dean, Dilip Ravindran, and Jörg Stoye, December 2022.</li>
+        <li><span class="text-blue-600">"Stochastic Choice and Noisy Beliefs in Games: an Experiment,"</span> Evan Friedman and Jeremy Ward, July 2021. </li>
+        <li><span class="text-blue-600">"Learning versus Unlearning: An Experiment on Retractions,"</span> Duarte Gonçalves, Jonathan Libgober, and Jack Willis, June 2021.</li>
+        <li><span class="text-blue-600">"Competing Bandits: The Perils of Exploration Under Competition,"</span> Guy Aridor, Yishay Mansour, Aleksandrs Slivkins, Zhiwei Steven Wu, March 2021.</li>
+        <li><span class="text-blue-600">"Diagonal Games: A Tool for Experiments and Theory,"</span> Duarte Gonçalves, September 2020. </li>
+        <li><span class="text-blue-600">"Deliberately Stochastic,"</span> Simone Cerreia-Vioglio, David Dillenberger, Pietro Ortoleva and Gil Riella, May 2018.</li>
+        <li><span class="text-blue-600">"Status Quo Bias in Large and Small Choice Sets,"</span> Mark Dean, November 2008.</li>
+      </ul>
+    </div>
+  </section>
 </Layout>

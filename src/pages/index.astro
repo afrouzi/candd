@@ -14,7 +14,10 @@ const { fullName, title, institute, research_areas } = profile
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
+
+
 <Layout>
+
 	<!-- Hero Section -->
 	<section class='flex items-center gap-12 border-b pb-12'>
 		<Hero
@@ -25,13 +28,44 @@ const { fullName, title, institute, research_areas } = profile
 		/>
 	</section>
 
-	<!-- Research Areas -->
-	<section class='py-12 border-b'>
-		<Grid gridTitle='Research Areas' gridItems={research_areas} />
+	<!-- Main Content and News Side-by-Side -->
+	<section class='flex flex-col md:flex-row gap-8 border-b py-12'>
+		<div class='flex-1'>
+			<!-- About Section -->
+			<h2 class='text-2xl font-bold mb-4'>About</h2>
+			<p>
+				The Cognition and Decision Lab is a joint venture among principal investigators
+				<a href='http://www.columbia.edu/~mw2230/'>Michael Woodford</a>,
+				<a href='http://www.columbia.edu/~md3405/'>Mark Dean</a> and
+				<a href='http://www.afrouzi.com/'>Hassan Afrouzi</a>, faculty members of the Economics Department at Columbia University.
+				The lab's aim is to use tools and techniques from Economics, Neuroscience, and Psychology to better understand the cognitive processes underlying economic decision making. Current projects include studying the way in which limited attention is allocated during choice and understanding the role of incomplete preferences in economic decision making. For more information, please contact one of the principal investigators.
+			</p>
+
+			<!-- Announcements Section -->
+			<div class='mt-8'>
+				<h2 class='text-2xl font-bold mb-4'>Announcements</h2>
+				<ul>
+					<li><strong>Summer 2023:</strong> Dilip and Mark will present their paper <a href='http://www.columbia.edu/~md3405/Working_Paper_24.pdf'>A Better Test of Choice Overload</a> at BRIC, NASM, and EEA-ESEM conferences.</li>
+				</ul>
+			</div>
+		</div>
+		<aside class='md:w-1/3 w-full'>
+			<!-- Latest News Section -->
+			<div class='bg-base-200 rounded-lg p-6 shadow'>
+				<h2 class='text-2xl font-bold mb-4'>Latest News</h2>
+				<ul>
+					<li><strong>April 2025:</strong> Giulia's artwork was selected for the cover of Trends in Immunology for the April 2025 issue! <a href='https://www.cell.com/issue/S1471-4906%2824%29X0005-8'>Check it out</a>.</li>
+					<li><strong>March 2025:</strong> Giulia's work <a href='https://www.informationisbeautifulawards.com/showcase/7323-a-world-of-smiles'>A World of Smiles?</a> longlisted for the Information is Beautiful Awards 2024!</li>
+					<li><strong>January 2025:</strong> Giulia's paper "Model Selection for Behavioral Learning Data and Applications to Contextual Bandits" accepted to AISTATS 2025.</li>
+					<li><strong>January 2025:</strong> Mike's paper with Xuexin Wei, <a href='https://www.pnas.org/doi/10.1073/pnas.2407540122'>Representational Geometry Explains Puzzling Error Distributions in Behavioral Tasks</a>, published in PNAS.</li>
+				</ul>
+			</div>
+		</aside>
 	</section>
 
-	<!-- Recent Publications -->
-	<section class='py-12 border-t'>
-		<ArticleList listTitle='Recent Publications' listItems={publications} />
+	<!-- Lab Image -->
+	<section class='py-12 border-b'>
+		<img src='https://static.wixstatic.com/media/e1b5f3_568421fdf22b4aa083bddc1a6c06eba4~mv2.jpg/v1/crop/x_0,y_110,w_7008,h_4453/fill/w_1876,h_1192,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/Columbia%20Economics%20-%20Headshots%20%26%20Group%20Photos%20-%2009-06-2024%20(502%20of%20652).jpg' alt='Lab Group Photo' class='w-full rounded shadow' />
 	</section>
+
 </Layout>

@@ -10,7 +10,8 @@ import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
+    base: '/candd/',
+    output: 'static',
     integrations: [react(), tailwind(), sitemap()],
-    site: template.website_url,
-    base: template.base,
+    site: template.website_url
 });
