@@ -1,6 +1,6 @@
 export const profile = {
 	fullName: 'Cognition and Decision Lab',
-	title: 'Economics, Neuroscience, and Psychology',
+	title: '',
 	institute: 'Columbia University',
 	author_name: 'Woodford, Dean, Afrouzi',
 	research_areas: [
@@ -34,7 +34,7 @@ export const template = {
 }
 
 export const seo = {
-	default_title: 'Astro Academia',
-	default_description: 'Astro Academia is a template for academic websites.',
+	default_title: 'Cognition and Decision Lab',
+	default_description: 'Cognition and Decision Lab is a research group focused on economic decision making.',
 	default_image: '/images/astro-academia.png',
 }
