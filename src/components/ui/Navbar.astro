@@ -61,9 +61,37 @@ const {fullName, title} = profile
           if (el) {
             el.scrollIntoView({ behavior: 'smooth' });
             history.replaceState(null, '', href);
+            el.classList.add('highlight-section');
+            setTimeout(() => {
+              el.classList.remove('highlight-section');
+            }, 1200);
           }
+        } else {
+          // Always navigate to the anchor, even from other pages
+          window.location.href = href;
         }
       });
     });
   });
+
+  // Highlight section after page load if anchor is present
+  window.addEventListener('DOMContentLoaded', function () {
+    const anchor = window.location.hash.replace('#', '');
+    if (anchor) {
+      const el = document.getElementById(anchor);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' });
+        el.classList.add('highlight-section');
+        setTimeout(() => {
+          el.classList.remove('highlight-section');
+        }, 1200);
+      }
+    }
+  });
 </script>
+<style>
+  .highlight-section {
+    box-shadow: 0 0 0 4px #2563eb;
+    transition: box-shadow 0.3s;
+  }
+</style>
