@@ -14,7 +14,7 @@ import people from '../data/people.json'
             <img src={faculty.image} alt={faculty.name} class="profile-square mb-4 mx-auto" />
             <h3 class="text-xl font-semibold text-center">{faculty.name}</h3>
             <p>{faculty.title}</p>
-            <p class="text-sm mt-2" style="text-align: justify;">Areas of Interest: {faculty.areas}</p>
+            <p class="text-sm mt-2" style="text-align: justify; word-break: break-word; hyphens: auto;">Areas of Interest: {faculty.areas}</p>
             <div class="mt-2 flex flex-col gap-1">
               <a href={faculty.website} class="text-blue-600 underline">Website</a>
               <a href={`mailto:${faculty.email}`} class="text-blue-600 underline">{faculty.email}</a>
