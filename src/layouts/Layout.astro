@@ -38,7 +38,15 @@ const {
 			<!-- Drawer content -->
             <div class='drawer-content bg-base-100'>
 				<!-- Top bar removed -->
-                <main class='p-8 pt-10 lg:pt-16 lg:max-w-5xl max-w-full mx-auto min-h-screen flex flex-col justify-between'>
+				<main class='p-8 pt-10 lg:pt-16 lg:max-w-5xl max-w-full mx-auto min-h-screen flex flex-col justify-between'>
+					<!-- Mobile nav button -->
+					<div class="lg:hidden flex items-center mb-4">
+						<button class="btn btn-square btn-ghost" aria-label="Open navigation menu" onclick="document.getElementById('my-drawer').checked = true;">
+							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="size-6 stroke-current">
+								<path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+							</svg>
+						</button>
+					</div>
 					<!-- Page content -->
 					<slot />
 				<Footer />
