@@ -1,13 +1,21 @@
-
 import React from 'react';
 import newsItems from '../../data/news.json';
 
-
 export default function NewsList() {
-  // Always show all news items in a scrollable container
   return (
     <div>
+      <style>{`
+        .news-list a {
+          color: #2176b6;
+        }
+        @media (prefers-color-scheme: dark) {
+          .news-list a {
+            color: #2176b6;
+          }
+        }
+      `}</style>
       <ul
+        className="news-list"
         style={{
           maxHeight: '300px',
           overflowY: 'auto',
@@ -15,11 +23,9 @@ export default function NewsList() {
         }}
       >
         {newsItems.map((item, idx) => (
-          <li key={idx}>
-            <strong>{item.date}:</strong> {item.text}
-            {item.link && (
-              <a href={item.link} target="_blank" rel="noopener noreferrer"> {item.linkText}</a>
-            )}
+          <li key={idx} style={{ marginBottom: '0.75rem', paddingBottom: '0.5rem', borderBottom: '1px solid #e0e7ef', fontSize: '0.95em' }}>
+            <strong>{item.date}:</strong>{' '}
+            <span style={{ textAlign: 'justify', display: 'inline-block', width: '100%' }} dangerouslySetInnerHTML={{ __html: item.text }} />
           </li>
         ))}
       </ul>

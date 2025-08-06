@@ -11,10 +11,10 @@ import people from '../data/people.json'
       <div class="grid md:grid-cols-3 gap-8">
         {people.faculty.map(faculty => (
           <div class="flex flex-col" key={faculty.name}>
-            <img src={faculty.image} alt={faculty.name} class="profile-square mb-4" />
-            <h3 class="text-xl font-semibold">{faculty.name}</h3>
+            <img src={faculty.image} alt={faculty.name} class="profile-square mb-4 mx-auto" />
+            <h3 class="text-xl font-semibold text-center">{faculty.name}</h3>
             <p>{faculty.title}</p>
-            <p class="text-sm mt-2">Areas of Interest: {faculty.areas}</p>
+            <p class="text-sm mt-2" style="text-align: justify;">Areas of Interest: {faculty.areas}</p>
             <div class="mt-2 flex flex-col gap-1">
               <a href={faculty.website} class="text-blue-600 underline">Website</a>
               <a href={`mailto:${faculty.email}`} class="text-blue-600 underline">{faculty.email}</a>
