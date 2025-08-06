@@ -8,10 +8,9 @@ export default function NewsList() {
         .news-list a {
           color: #2176b6;
         }
-        @media (prefers-color-scheme: dark) {
-          .news-list a {
-            color: #2176b6;
-          }
+        .news-list a:hover {
+          color: #174e7c;
+          text-decoration: underline;
         }
       `}</style>
       <ul
